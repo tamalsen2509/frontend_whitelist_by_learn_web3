@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div class="row pt-2">
+        <h6 class="text-center alert alert-danger" role="alert" *ngIf="isError"> User is Already White-listed
+            <button class="btn btn-outline-dark btn-floating" (click)="refresh()">x</button>
+        </h6>
+    </div>
+
+    <div class="row pt-4">
+
+
+        <div class="col-sm-4">
+            <h3 class="pt-3">Welcome to Crypto Dev!</h3>
+            <span *ngIf="connected" class="badge text-bg-warning"> Connected
+            </span>
+            <span *ngIf="!connected" class="badge text-bg-danger">You are Not Connected
+            </span>
+            <span></span>
+            <p class="pt-3">
+                Its an NFT collection for developers in Crypto.
+            </p>
+
+
+
+            <button type="button" (click)="connectContract()" class="btn btn-primary">Join Whitelist Community</button>
+            <!-- click event has bind with connectcontract function -->
+        </div>
+
+
+
+        <div class="col-sm-8">
+            <img src="../../assets/2613733.jpg" class="img-fluid img-responsive" width="90%" height="60%"
+                style="margin-left: 20% ;" alt="">
+
+        </div>
+
+
+    </div>
+</div>

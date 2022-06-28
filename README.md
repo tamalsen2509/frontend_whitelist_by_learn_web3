@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Code contribution
 
-Code contribution is always welcome; please clone the repo ; switch to feature branch and start adding improvements
+Code contribution is always welcome; please clone the repo ; switch to feature branch and start adding improvements; Thank you
 
 
 ## Development server

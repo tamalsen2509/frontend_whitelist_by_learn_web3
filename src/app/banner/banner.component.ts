@@ -63,7 +63,7 @@ export class BannerComponent implements OnInit {
         this.connected = false
       }
 
-
+      this.getNumberofWhiteList()
 
     } catch (err: any) {
 
@@ -74,7 +74,7 @@ export class BannerComponent implements OnInit {
 
   }
 
-  async connectContract() {
+  async connectContract() { // function bind with click event 
     // method to enter details in smart contract
     try {
       this.whitelistContract = new ethers.Contract(ADDRESS_WHITELIST, WhitelistABI.abi, this.signer)
@@ -82,8 +82,6 @@ export class BannerComponent implements OnInit {
       this.spinner.show()
       await tx.wait();
       this.spinner.hide()
-      this.getNumberofWhiteList()
-
 
     } catch (error: any) {
 
@@ -105,7 +103,7 @@ export class BannerComponent implements OnInit {
       this.whitelistContract = new ethers.Contract(ADDRESS_WHITELIST, WhitelistABI.abi, this.signer)
       this.whiteListNumbers = await this.whitelistContract.numAddressesWhitelisted()
 
-      console.log(this.whiteListNumbers)
+
     } catch (error) {
       console.log(error)
     }
